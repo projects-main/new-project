@@ -1,0 +1,90 @@
+body {
+    
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url("abstract-geometric-background-shapes-texture.jpg");
+    overflow: hidden;
+    background-size: cover;
+}
+
+.main {
+    font-size: 11px;
+    width: 640px;
+    height: 640px;
+    position: relative;
+    top:0;
+    right:0;
+}
+
+.sun {
+    position: absolute;
+    top: 240px;
+    left: 240px;
+    width: 140px;
+    height: 140px;
+    background:url(sun.jpg);
+    background-position: center;
+    
+    border-radius: 50%;
+    box-shadow: 0 0 45px white;
+}
+.earth, .moon{
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+
+}
+.earth{
+    top: 80px;
+    left: 80px;
+    width: 480px;
+    height: 480px;
+    animation: erth 36.5s linear infinite;
+
+}
+.moon{
+    top: 0;
+    right: 0;
+    width:128px;
+    height: 128px;
+    animation:  erth 2.7s linear infinite;
+
+}
+.earth::before,
+.moon::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+
+}
+.earth::before{
+    top:45px;
+    right: 45px;
+    width: 48px;
+    height: 48px;
+    background:url(earth.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.moon::before{
+    top: 13px;
+    right: 3.2px;
+    width: 19.2px;
+    height: 19.2px;
+    background:url(moon.jpg);
+    background-size: cover;
+    background-position: center;
+}
+@keyframes erth {
+    to{
+        transform: rotate(360deg);
+
+    }   
+    
+}
